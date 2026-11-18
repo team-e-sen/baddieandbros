@@ -1,110 +1,47 @@
-
-# Inventory Forecasting System
-
-The Inventory Forecasting System is designed to process historical
-sales data, manage current inventory metrics, and predict seasonal
-stock demand to support pricing and reordering decisions.
+# Inventory Management System - SCM Project
 
 ## Project Overview
 
-The system uses a layered architecture to organize inventory
-management, demand forecasting, data storage, and reporting.
+This repository contains the Software Configuration Management (SCM)
+documentation and process simulation for an Inventory Management System.
 
-Its primary objective is to provide inventory-related information
-and demand forecasts through a centralized system.
+**Note:** This project is a process-simulation exercise. We are applying
+enterprise-level SCM practices (Jira, GitHub, Pull Requests, CCB
+approvals, and CI/CD) to manage documentation artifacts (Requirements,
+Architecture, Test Plans, and SCM Plans) rather than writing application
+code.
 
-## System Components
+## The Team (Group E)
 
-- **Inventory Module:** Manages current stock levels, catalog data,
-  and triggers low-stock alerts.
-- **Forecasting Module:** Evaluates historical sales velocity and
-  seasonal trends to project future demand.
-- **Dashboard & Reporting Module:** Displays key performance metrics,
-  forecasting charts, and stock warnings.
-- **Database Layer:** Persists sales logs, product catalog items,
-  and forecasting model outputs.
+| Name | Matric Number | Role | GitHub Username |
+| :--- | :--- | :--- | :--- |
+| Queen Esther Emeanua | 23120112016 | Config Manager & CCB | @qemeanua |
+| Emmanuel Abbah | 23120112001 | Config Manager & CCB | @e-abbah |
+| Paul Majiyebo Esuga | 24120112061 | CCB & QA | @Paul-Esuga |
+| Daniel Ezinna | 23120112021 | Developer / Documenter | @daniel-ezinna |
+| Gabriel Mamman | 23120112028 | Developer / Documenter | @gmghorse |
+| Treasure Onwuchekwa | 23120112046 | Developer / DevOps | @tocjpapi |
 
-## Technology Stack
+## Tools Used
 
-| Category | Technology |
-|---|---|
-| Development Environment | Visual Studio Code |
-| Database Management | PostgreSQL / MySQL |
-| UI/UX Prototyping | Figma |
-| Version Control | Git |
-| Repository Hosting | GitHub |
-| Project Management | Jira |
-
-## Data Flow
-
-1. **Ingestion:** Sales and stock updates are logged into the
-   Database Layer.
-2. **Processing:** The Forecasting Module retrieves historical data
-   to execute demand algorithms.
-3. **Visualization:** Summaries and alerts are rendered on the
-   Dashboard UI.
-
-## Third-Party Dependencies
-
-The system may utilize the following external dependencies:
-
-- External forecasting and statistical libraries.
-- API integrations for inventory metrics.
-
-All external libraries must have pinned dependency versions to
-ensure system stability.
+- **Version Control:** GitHub
+- **Issue Tracking:** Jira (Integrated with GitHub)
+- **CI/CD:** GitHub Actions
 
 ## Repository Structure
 
-```text
-.
-├── .github/
-│   ├── pull_request_template.md
-│   └── workflows/
-│       └── markdown-lint.yml
-├── docs/
-│   ├── SCMP.md
-│   ├── architecture.md
-│   ├── requirements.md
-│   └── test_plan.md
-├── CHANGELOG.md
-└── README.md
-```
+- `.github/` - Contains CODEOWNERS and Pull Request templates.
+- `docs/` - Contains all SCM documentation (SCMP, Requirements,
+  Architecture, Test Plan).
+- `CHANGELOG.md` - Tracks the release history and baselines.
 
-## Documentation
+## SCM Workflow (How We Work)
 
-The project documentation includes:
-
-- **Software Configuration Management Plan:** `docs/SCMP.md`
-- **Requirements Specification:** `docs/requirements.md`
-- **Architecture Specification:** `docs/architecture.md`
-- **Test Plan:** `docs/test_plan.md`
-- **Change History:** `CHANGELOG.md`
-
-## Development Workflow
-
-The project uses Git and GitHub for version control and
-collaborative development.
-
-Jira is used to track project tasks and development activities.
-
-Contributors are expected to:
-
-- Work on separate branches.
-- Reference Jira issue keys in commits and pull requests.
-- Submit changes through pull requests.
-- Avoid pushing directly to the `main` branch.
-- Ensure Markdown documentation passes automated linting.
-
-## Continuous Integration
-
-GitHub Actions is used to automate Markdown linting.
-
-The workflow checks Markdown files for formatting issues
-when changes are pushed or pull requests are created.
-
-## Project Status
-
-The repository and initial project documentation are being
-established as part of the Software Configuration Management
-practical.
+1. **Change Request:** Every task starts as a ticket in Jira.
+2. **Branching:** Developers create a branch using the format
+   `feature/<username>/<Jira-ID>-<description>`.
+3. **Pull Requests:** No direct pushes to `main`. Developers open PRs.
+4. **CCB Approval:** The Change Control Board (Ezinne, Emmanuel, Esuga)
+   must review and approve every PR.
+5. **Merge:** Once CI passes and CCB approves, the branch is merged into
+   `main` and tagged with a release baseline.
